@@ -1,0 +1,9 @@
+2.png
+3600000
+3600000
+3600000
+Cat
+grave.png
+food2.png
+egg2.png
+medium

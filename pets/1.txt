@@ -1,0 +1,9 @@
+1.png
+14400000
+7200000 
+1800000 
+Dog
+grave.png
+food1.png
+egg1.png
+easy
