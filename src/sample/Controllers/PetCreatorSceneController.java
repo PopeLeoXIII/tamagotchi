@@ -9,12 +9,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import sample.Main;
 import sample.Models.Game;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;

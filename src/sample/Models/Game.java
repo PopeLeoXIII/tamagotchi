@@ -3,14 +3,11 @@ package sample.Models;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
-import javafx.util.Duration;
 import sample.Controllers.Register;
 import sample.GameStatus;
 import sample.Main;
 import sample.SpriteAnimation;
-
 import java.io.*;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;

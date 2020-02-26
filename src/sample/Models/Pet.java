@@ -1,11 +1,9 @@
 package sample.Models;
 
 import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Font;
 import javafx.util.Duration;
 import sample.SpriteAnimation;
 
