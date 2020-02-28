@@ -1,4 +1,4 @@
-package sample.Controllers;
+package sample.FileIO;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -24,14 +24,12 @@ public class Register {
             ArrayList<String> arrayList = new ArrayList<>();
 
             while ((line = reader.readLine()) != null) {
-                arrayList.add(line);
+                arrayList.add(line.trim());
             }
             reader.close();
             return arrayList;
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        }  catch (IOException e) {
             e.printStackTrace();
         }
         return null;

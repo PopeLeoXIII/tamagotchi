@@ -55,10 +55,6 @@ public class MainSceneController {
     private Text timeTextBox;
     @FXML
     private Text textForDeadMessage;
-//    @FXML
-//    public void writeText() {
-//        System.out.println("Button clicked!");
-//    }
 
     @FXML
     public void feed(){
@@ -106,7 +102,7 @@ public class MainSceneController {
         }
     }
 
-    public boolean alive(long d){
+    private boolean alive(long d){
         if(d > game.getLastFeed() + game.getStateBad()){
 
             funeral();
@@ -172,7 +168,7 @@ public class MainSceneController {
             game.updateTooltip();
         }
     }
-    public void funeral(){
+    private void funeral(){
         if(game.getGameStatus() == GameStatus.STILL_ALIVE) {
             ImageView imageView = new ImageView(game.getGraveSprite());
             imageView.setTranslateX(game.getPet().getTranslateX());
@@ -192,9 +188,9 @@ public class MainSceneController {
         playButton.setDisable(true);
     }
 
-    public void initialize() throws FileNotFoundException {
+    public void initialize() {
         game = Main.game;
-        backgroundIV = new ImageView(new Image(new FileInputStream("bg.png")));
+        backgroundIV = new ImageView(game.getBackground());
         mainPane.getChildren().add(backgroundIV);
         if(game.getGameStatus() == GameStatus.STILL_ALIVE) {
             createButton.setVisible(false);

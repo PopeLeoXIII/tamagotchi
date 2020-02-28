@@ -3,10 +3,10 @@ package sample.Models;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
-import sample.Controllers.Register;
+import sample.FileIO.Register;
 import sample.GameStatus;
 import sample.Main;
-import sample.SpriteAnimation;
+import sample.Animation.PetSpriteAnimation;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,7 +55,7 @@ public class Game {
         return register;
     }
 
-    public SpriteAnimation getPetAnimation() {
+    public PetSpriteAnimation getPetAnimation() {
         return pet.getAnimation();
     }
 
@@ -82,9 +82,8 @@ public class Game {
     public void setBackground(Image background) {
         this.background = background;
     }
-    public Tooltip getTooltip() {
-        return tooltip;
-    }
+
+    public Tooltip getTooltip() { return tooltip; }
 
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
@@ -141,12 +140,12 @@ public class Game {
             foodSprite = new Image(new FileInputStream(list.get(6)));
 
 
-            arrayList = new ArrayList<String>(Arrays.asList(list.get(0),
+            arrayList = new ArrayList<>(Arrays.asList(list.get(0),
                                                       lastFeed.toString(),
                                                       stateGod.toString(),
                                                       stateBad.toString(),
                                                       stateDead.toString(),
-                    petName, birthdayDate.toString(),
+                                                      petName, birthdayDate.toString(),
                                                       list.get(5), list.get(6),
                                                       multiplier.toString()));
 

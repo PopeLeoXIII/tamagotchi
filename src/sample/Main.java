@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.Stage;
-import sample.Controllers.Register;
+import sample.FileIO.Register;
 import sample.Models.Game;
 
 import java.net.URL;

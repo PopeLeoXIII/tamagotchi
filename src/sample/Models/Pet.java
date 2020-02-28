@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import sample.SpriteAnimation;
+import sample.Animation.PetSpriteAnimation;
 
 
 public class Pet extends Pane {
@@ -17,14 +17,14 @@ public class Pet extends Pane {
     private int width = 32;
     private int height = 32;
     private String name;
-    private SpriteAnimation animation;
+    private PetSpriteAnimation animation;
 
 
     public String getName() {
         return name;
     }
 
-    public SpriteAnimation getAnimation() {
+    public PetSpriteAnimation getAnimation() {
         return animation;
     }
 
@@ -43,7 +43,7 @@ public class Pet extends Pane {
         ImageView imageView = new ImageView(sprite);
         imageView.setViewport(new Rectangle2D(offsetX,offsetY,width,height));
         this.setLayoutY(230);
-        animation = new SpriteAnimation(imageView, Duration.millis(200),count,columns,offsetX,offsetY,width,height);
+        animation = new PetSpriteAnimation(imageView, Duration.millis(200),count,columns,offsetX,offsetY,width,height);
         getChildren().addAll(imageView);
 
     }
